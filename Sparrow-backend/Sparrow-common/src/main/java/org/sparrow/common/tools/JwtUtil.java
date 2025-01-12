@@ -24,7 +24,7 @@ public class JwtUtil {
                 //图方便用subject主题,正规就用Claims字段来负责..
                 .setSubject(JSON.toJSONString(userInfDTO))
                 .compact();
-        return tokenString;
+        return AUTHORIZATION_TOKEN_PREFIX + tokenString;
     }
 
     public static UserInfDTO parseUserToken(String token){

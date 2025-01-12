@@ -5,9 +5,8 @@ import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import java.util.Collections;
-
 @Configuration
+@Slf4j
 public class CommonConfiguration {
 
     @ConditionalOnProperty(prefix = "web-filter",name = "UserLoginFilter",havingValue = "true")
@@ -17,6 +16,7 @@ public class CommonConfiguration {
         filterRegistrationBean.setFilter(new UserTokenFilter());
         filterRegistrationBean.addUrlPatterns("/**");
         filterRegistrationBean.setOrder(100);
+        log.info("当前部署模式: 单机, userLoginFilter init finish");
         return filterRegistrationBean;
     }
 
