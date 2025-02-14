@@ -1,0 +1,11 @@
+web-filter:
+  UserLoginFilter: true
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/Sparrows
+    driver-class-name: com.mysql.cj.jdbc.Driver

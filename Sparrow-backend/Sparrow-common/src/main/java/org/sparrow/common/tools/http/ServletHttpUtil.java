@@ -13,9 +13,10 @@ public class ServletHttpUtil {
     }
 
     public static void writeContextBody(HttpServletResponse servletResponse,int code,String contextType,String message){
+        servletResponse.setStatus(code);
+        servletResponse.setCharacterEncoding("UTF-8");
+        servletResponse.setContentType(contextType);
         try(PrintWriter writer = servletResponse.getWriter()) {
-            servletResponse.setStatus(code);
-            servletResponse.setContentType(contextType);
             writer.write(message);
             writer.flush();
         } catch (IOException e) {

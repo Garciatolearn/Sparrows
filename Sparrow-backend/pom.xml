@@ -9,6 +9,8 @@
         <module>Sparrow-trigger</module>
         <module>Sparrow-infrastructure</module>
         <module>Sparrow-common</module>
+        <module>Sparrow-app</module>
+        <module>Sparrow-domain</module>
     </modules>
     <parent>
         <groupId>org.garcia</groupId>
@@ -23,7 +25,5 @@
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-    <dependencies>
 
-    </dependencies>
 </project>
